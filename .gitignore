@@ -1,3 +1,4 @@
 dataset.csv
 house_prices_model.pickle
 columns.json
+.DS_Store
