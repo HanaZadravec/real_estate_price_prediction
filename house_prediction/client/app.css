@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f4f7f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Image */
+.img {
+  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDl8fGhvdXNlfGVufDB8fHx8MTY3NzA2MzU1Mg&ixlib=rb-1.2.1&q=80&w=1920");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Form Container */
+.form {
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centriranje unutar forme */
+}
+
+.form:hover {
+  transform: translateY(-3px);
+}
+
+/* Headings */
+h2 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.area,
+.location {
+  width: 100%;
+  max-width: 300px; /* Ograničenje širine */
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f8f9fa;
+  font-size: 16px;
+  text-align: center; /* Centriranje teksta unutar input polja */
+  transition: all 0.3s ease-in-out;
+}
+
+.area:focus,
+.location:focus {
+  background: white;
+  border-color: #27ae60;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(39, 174, 96, 0.3);
+}
+
+/* Submit Button */
+.submit {
+  background: linear-gradient(135deg, #27ae60, #1e8449);
+  color: white;
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.submit:hover {
+  background: linear-gradient(135deg, #1e8449, #145a32);
+  box-shadow: 0px 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Result Box */
+.result {
+  background: #f39c12;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: bold;
+  box-shadow: 0px 5px 15px rgba(243, 156, 18, 0.3);
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Switch Field (Radio Buttons Styling) */
+.switch-field {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.switch-field input {
+  display: none;
+}
+
+.switch-field label {
+  background: #ecf0f1;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.switch-field input:checked + label {
+  background: #27ae60;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .form {
+    width: 90%;
+  }
+
+  .area,
+  .location,
+  .submit,
+  .result {
+    max-width: 100%;
+  }
+}
